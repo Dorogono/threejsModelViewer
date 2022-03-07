@@ -2,8 +2,11 @@
 ## 상세 설명 보러 가기
 https://www.notion.so/3D-Model-Viewer-e5d3825ea5eb4104b1cfc7578c3c1f18
 
-## 실행 
-https://user-images.githubusercontent.com/101032002/157026574-157a2891-b322-49a3-8ee5-23b33368e1e3.mp4
+## 실행 영상
+
+
+https://user-images.githubusercontent.com/101032002/157027171-6653d71f-461f-468c-a739-e8e0a199dbab.mp4
+
 
 
 ## 모델 불러오기 
