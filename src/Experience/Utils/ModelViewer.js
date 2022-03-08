@@ -28,6 +28,7 @@ export default class ModelViewer
         this.experience = new Experience()
         this.scene = this.experience.scene
         this.model = this.experience.model
+        this.type = this.model.type
         this.time = this.experience.time
 
         this.loadedModel = null
@@ -37,108 +38,93 @@ export default class ModelViewer
 
     startLoading()
     {
-        switch(this.model.type)
+        if(this.type === 'gltf' || this.type === 'glb')
         {
-            case 'gltf':
-            case 'glb':
-                this.gltfView = new GLTFViewer()
-                break;
-
-            /** 인기 포맷 */
-            case 'fbx':
-                this.fbxView = new FBXViewer()
-                break;
-            
-            /** 인기 포맷 */
-            case 'dae':
-                this.colladaView = new ColladaViewer()
-                break;
-
-            /** 인기 포맷 */
-            case 'obj':
-                this.objView = new OBJViewer()
-                break;
-
-            case 'pmx':
-                this.mmdView = new MMDViewer()
-                break;
-
-            case 'ifc':
-                this.ifcView = new IFCViewer()
-                break;
-
-            case 'bvh':
-                this.bvhView = new BVHViewer()
-                break;
-
-            case 'ply':
-                this.plyView = new PLYViewer()
-                break;
-
-            /** 인기 포맷 */
-            case 'stl':
-                this.stlView = new STLViewer()
-                break;
-
-            case 'mdd':
-                this.mddView = new MDDViewer()
-                break;
-
-            case 'xyz':
-                this.xyzView = new XYZViewer()
-                break;
-
-            case 'kmz':
-                this.kmzView = new KMZViewer()
-                break;
-
-            case 'nrrd':
-                this.nrrdView = new NRRDViewer()
-                break;
-
-            case 'pcd':
-                this.pcdView = new PCDViewer()
-                break;
-
-            case 'prwm':
-                this.prwmView = new PRWMViewer()
-                break;
-            
-            case 'tilt':
-                this.tiltView = new TiltViewer()
-                break;
-            
-            case 'vrm':
-                this.vrmView = new VRMViewer()
-                break;
-
-            /** 인기 포맷 */
-            case 'wrl':
-                this.vrmlView = new VRMLViewer()
-                break;
-
-            case 'vtp':
-            case 'vtk':
-                this.vtkView = new VTKViewer()
-                break;
-
-            /** 인기 포맷 */
-            case '3ds':
-                this.tdsView = new TDSViewer()
-                break;
-
-            /** 인기 포맷 */
-            case 'amf':  // 3d 프린터 포맷
-                this.amfView = new AMFViewer()
-                break;
-
-            /** 인기 포맷 */
-            case '3mf':  // 3d 프린터 포맷
-                this.threeMView = new ThreeMFViewer()
-                break;
-
-            default:
-                break;
+            this.gltfView = new GLTFViewer()
+        }
+        else if(this.type === 'fbx')
+        {
+            this.fbxView = new FBXViewer()
+        }
+        else if(this.type === 'dae')
+        {
+            this.colladaView = new ColladaViewer()
+        }
+        else if(this.type === 'obj')
+        {
+            this.objView = new OBJViewer()
+        }
+        else if(this.type === 'pmx')
+        {
+            this.mmdView = new MMDViewer()
+        }
+        else if(this.type === 'ifc')
+        {
+            this.ifcView = new IFCViewer()
+        }
+        else if(this.type === 'bvh')
+        {
+            this.bvhView = new BVHViewer()
+        }
+        else if(this.type === 'ply')
+        {
+            this.plyView = new PLYViewer()
+        }
+        else if(this.type === 'stl')
+        {
+            this.stlView = new STLViewer()
+        }
+        else if(this.type === 'mdd')
+        {
+            this.mddView = new MDDViewer()
+        }
+        else if(this.type === 'xyz')
+        {
+            this.xyzView = new XYZViewer()
+        }
+        else if(this.type === 'kmz')
+        {
+            this.kmzView = new KMZViewer()
+        }
+        else if(this.type === 'nrrd')
+        {
+            this.nrrdView = new NRRDViewer()
+        }
+        else if(this.type === 'pcd')
+        {
+            this.pcdView = new PCDViewer()
+        }
+        else if(this.type === 'prwm')
+        {
+            this.prwmView = new PRWMViewer()
+        }
+        else if(this.type === 'tilt')
+        {
+            this.tiltView = new TiltViewer()
+        }
+        else if(this.type === 'vrm')
+        {
+            this.vrmView = new VRMViewer()
+        }
+        else if(this.type === 'wrl')
+        {
+            this.vrmlView = new VRMLViewer()
+        }
+        else if(this.type === 'vtp' || this.type === 'vtk')
+        {
+            this.vtkView = new VTKViewer()
+        }
+        else if(this.type === '3ds')
+        {
+            this.tdsView = new TDSViewer()
+        }
+        else if(this.type === amf)
+        {
+            this.amfView = new AMFViewer()
+        }
+        else if(this.type === '3mf')
+        {
+            this.threeMView = new ThreeMFViewer()
         }
     }
 

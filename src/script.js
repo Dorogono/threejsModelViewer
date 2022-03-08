@@ -8,5 +8,15 @@ const model = {
     type: 'gltf',
     path: 'Fox/glTF/Fox.gltf'
 }
+// const model = {
+//     name: 'Fox',
+//     type: '3ds',
+//     path: {
+//         textures: {
+//             normal: '3ds/portalgun/textures/normal.jpg'
+//         },
+//         model: '3ds/portalgun/portalgun.3ds'
+//     }
+// }
 
 new Experience(canvas, model)

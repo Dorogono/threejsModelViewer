@@ -27,7 +27,7 @@ body
 .ppBtn {
     position: relative;
     left: 20px;
-    bottom: 10px;
+    bottom: -7px;
     cursor: pointer;
     font-size: 30px;
 }
