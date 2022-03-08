@@ -1,5 +1,15 @@
 # three.js Loader를 활용한 3D Model Viewer
-## 모델 불러오기
+## 상세 설명 보러 가기
+https://www.notion.so/3D-Model-Viewer-e5d3825ea5eb4104b1cfc7578c3c1f18
+
+## 실행 영상
+
+
+https://user-images.githubusercontent.com/101032002/157027171-6653d71f-461f-468c-a739-e8e0a199dbab.mp4
+
+
+
+## 모델 불러오기 
 ```
 const model = {
     name: 'Fox',
@@ -8,7 +18,7 @@ const model = {
 }
 ```
 -> DB에 이런 형식으로 저장할 것이라고 가정하고 진행했다.
-## 적용할 모듈 불러오기
+## 적용할 모듈 불러오기 (src/script.js)
 ```
 import Experience from './Experience/Experience.js'
 const canvas = document.getElementById('canvas4D')
